@@ -20,6 +20,13 @@ module JDMB
       end
     end
 
+    describe "#progs" do
+      it "returns an array of progs contained in the collection" do
+        collection = Collection.new(name: "Foo", progs: "2-4,5,7-8")
+        expect(collection.progs).to eq [2,3,4,5,7,8]
+      end
+    end
+
     describe "#includes_prog?" do
       context "when a collection includes a prog" do
         it "returns true" do

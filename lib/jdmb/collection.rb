@@ -1,5 +1,7 @@
 module JDMB
   class Collection
+    attr_reader :progs
+
     def initialize(options)
       parse_progs(options[:progs])
     end
